@@ -29,6 +29,7 @@ int main(int argc, char**argv){
         }
     }else if(!strcmp("g", argv[2])){
         // MODE GRAPHIQUE
+        rotatestart(&robot, map);
         graphmode(graph, robot, map, &steps);
     }else{
         // Mauvais choix de mode
