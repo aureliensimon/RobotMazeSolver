@@ -7,6 +7,7 @@ int main(int argc, char**argv){
     Graph graph;
     int steps = 0;
     int affTrace;
+    char nameMap[80];
 
     // Test nombre arguments
     if(argc != 3){
@@ -15,7 +16,11 @@ int main(int argc, char**argv){
     }
 
     // Init la Carte & Robot
-    map = getmap(argv[1]);
+    strcpy(nameMap, "maps/");
+    strcat(nameMap, argv[1]);
+    printf("%s", nameMap);
+    map = getmap(nameMap);
+    
     initRobot(&robot, map);
     rotatestart(&robot, map);
 

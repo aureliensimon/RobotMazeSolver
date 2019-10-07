@@ -43,11 +43,11 @@ void init(Graph *graph, Map map){
 
     // ECRAN
     (*graph).ecran = SDL_SetVideoMode(map.width*MAILLE, map.height*MAILLE, 32, SDL_HWSURFACE | SDL_DOUBLEBUF);
-    (*graph).robot = loadImg("robot.bmp");
-    (*graph).sol = loadImg("sol.bmp");
-    (*graph).mur = loadImg("mur.bmp");
-    (*graph).porte = loadImg("porte.bmp");
-    (*graph).visite = loadImg("visite.bmp");
+    (*graph).robot = loadImg("img/robot.bmp");
+    (*graph).sol = loadImg("img/sol.bmp");
+    (*graph).mur = loadImg("img/mur.bmp");
+    (*graph).porte = loadImg("img/porte.bmp");
+    (*graph).visite = loadImg("img/visite.bmp");
     if((*graph).ecran == NULL){
         fprintf(stderr, "Impossible de charger l'écran : %s\n", SDL_GetError());
         exit(EXIT_FAILURE);
