@@ -8,10 +8,11 @@ Follow steps :
 ```
 $ cd (place where you want to install)
 $ git clone https://github.com/aureliensimon/RobotMazeSolver.git
+$ cd RobotMazeSolver 
 $ make
 ```
 
-This will result with a exe call **path**
+This will result with a file call **path**
 
 ## Usage
 ```
