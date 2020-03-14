@@ -1,4 +1,4 @@
-#include "header.h"
+#include "../include/header.h"
 
 /**
  * Demande les options pour le mode graphique
