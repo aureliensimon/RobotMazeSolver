@@ -23,11 +23,7 @@ void initRobot(Robot *robot, Map map){
  * @return  endreach :  Booléen si la sortie est proche ou non
  */
 int EndReach(Map map, int x, int y){
-    int endreach = 0;
-    if(map.grid[x+1][y] == 'S' || map.grid[x-1][y] == 'S' || map.grid[x][y+1] == 'S' || map.grid[x][y-1] == 'S'){
-        endreach = 1;
-    }
-    return endreach;
+    return (map.grid[x+1][y] == 'S' || map.grid[x-1][y] == 'S' || map.grid[x][y+1] == 'S' || map.grid[x][y-1] == 'S');
 }
 
 /**
@@ -54,11 +50,8 @@ int nextIsWall(Map map, int x, int y, int dir){
             y++;
             break;
     }
-    if(map.grid[x][y] == 'x' || map.visited[x][y] == '.'){
-        return 1;
-    }else{
-        return 0;
-    }
+    
+    return (map.grid[x][y] == 'x' || map.visited[x][y] == '.');
 }
 
 /**
