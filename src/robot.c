@@ -184,8 +184,8 @@ int solvemaze(Robot robot, Map map, Graph graph, char mode, int *steps){
     // Explorer vers la droite
     turnRobotRight(&robot);
     moveRobot(&robot, &map);
-	way = solvemaze(robot, map, graph, mode, steps);
-	if(way){ return 1;}
+    way = solvemaze(robot, map, graph, mode, steps);
+    if(way){ return 1;}
 
     // Explorer vers le bas
     turnRobotRight(&robot);
@@ -193,6 +193,6 @@ int solvemaze(Robot robot, Map map, Graph graph, char mode, int *steps){
     way = solvemaze(robot, map, graph, mode, steps);
     if(way){ return 1;}
 
-	// Sinon c'est une impasse
+    // Sinon c'est une impasse
     return 0;
 }
